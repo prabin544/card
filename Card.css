@@ -1,0 +1,140 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent body from scrolling */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px; /* Fixed width for left column */
+    flex-shrink: 0; /* Do not shrink beyond content */
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-body {
+    background-color: #dcdcdc;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex: 1;
+  }
+  
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    max-height: 100%; /* Limit right column height */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent container from overflowing */
+  }
+  
+  .fetch-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fetch-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .data-container {
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust height to ensure proper padding and button space */
+    overflow-y: auto; /* Make data-container scrollable */
+    position: relative;
+  }
+  
+  pre {
+    background-color: #dcdcdc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    white-space: pre-wrap; /* Ensure long strings wrap */
+    word-wrap: break-word; /* Break long words if needed */
+  }
+  
+  .copy-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .copy-icon:hover {
+    color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #007bff;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
